@@ -2,18 +2,23 @@
 import Layout from "@layouts/Layout.astro";
 import BlogCard from "@components/BlogCard.astro";
 import { recent } from "@content/blogs";
+import Subscribe from "@components/Subscribe.astro";
 ---
 
 <Layout title="Astro Basic Blog Template" description="This is a blog template made with Astro and Tailwind. Made by Lance Ross">
   <section class="flex flex-col py-8">
     <h1 class="text-3xl mb-5">Welcome to my Astro Blog Template</h1>
-    <h2 class="text-xl text-black dark:text-zinc-300">I got bored and decided to create an Astro template from scratch. Hope you like it!</h2>
+    <p class="text-black dark:text-zinc-300 mb-5">I got bored and decided to create an Astro template from scratch. Hope you like it!</p>
+    <p class="text-black dark:text-zinc-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, debitis minima! Illo esse quod enim id deleniti, veritatis magnam dolorum non accusantium quam et nemo dolorem aspernatur eligendi quidem est.</p>
   </section>
   <section class="py-8">
     <h1 class="text-3xl mb-5">Recent Posts</h1>
-    <h2 class="text-xl text-black dark:text-zinc-300 mb-2">Looking for all of my blog posts? Click the paper with pen logo on the navbar!</h2>
+    <p class="text-black dark:text-zinc-300 mb-2">Looking for all of my blog posts? Click the "posts" or document icon on the navbar.</p>
     <div class="flex flex-col sm:grid-cols-2 place-items-center py-5 gap-2 sm:grid">
       {recent.map((recent) => <BlogCard title={recent.title} description={recent.description} pubDate={recent.pubDate} url={recent.url} tags={recent.tags} />)}
     </div>
+  </section>
+  <section class="pt-8 pb-12">
+    <Subscribe />
   </section>
 </Layout>
