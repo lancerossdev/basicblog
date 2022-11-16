@@ -10,7 +10,7 @@ export default defineConfig({
   site: "https://basicblog.lanceross.xyz",
   markdown: {
     shikiConfig: {
-      theme: "one-dark-pro",
+      theme: "github-dark-dimmed",
       wrap: true,
     },
   },

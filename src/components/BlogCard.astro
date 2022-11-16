@@ -15,21 +15,21 @@ const fullDate = new Date(pubDate).toLocaleDateString("en", {
 url = url + "/";
 ---
 
-<div class="grid grid-cols-1 max-w-xl gap-2 sm:grid-cols-3 leading-relaxed rounded-2xl dark:border-t dark:border-zinc-800 dark:hover:border-zinc-600 dark:text-zinc-400 transition-all">
-  <a class="col-span-3 flex flex-col gap-2 sm:gap-4 p-5 my-2 bg-white hover:bg-zinc-200 dark:bg-zinc-900 transition-colors shadow-xl rounded-lg" href={url}>
-    <time datetime={pubDate} class="text-sm tracking-wide text-black dark:text-zinc-400 transition-colors">{fullDate}</time>
-    <h2 class="text-xl text-black dark:text-white transition-colors">
+<div class="grid grid-cols-1 max-w-xl gap-2 sm:grid-cols-3 leading-relaxed rounded-2xl dark:border-t dark:border-zinc-800 dark:hover:border-zinc-600 dark:text-zinc-400 transition-all motion-reduce:transition-none">
+  <a class="col-span-3 flex flex-col gap-2 sm:gap-4 p-5 my-2 bg-white hover:bg-zinc-200 dark:bg-zinc-900 transition-colors motion-reduce:transition-none shadow-xl rounded-lg" href={url}>
+    <time datetime={pubDate} class="text-sm tracking-wide text-black dark:text-zinc-400 transition-colors motion-reduce:transition-none">{fullDate}</time>
+    <h2 class="text-xl text-black dark:text-white transition-colors motion-reduce:transition-none">
       {title}
     </h2>
     {
       tags && (
         <ul class="flex gap-2 flex-wrap my-2">
           {tags.map((tags) => (
-            <li class="dark:bg-zinc-800 bg-zinc-200 text-black dark:text-white py-0.5 px-2 text-sm rounded-md transition-colors">{tags}</li>
+            <li class="dark:bg-zinc-800 bg-zinc-200 text-black dark:text-white py-0.5 px-2 text-sm rounded-md transition-colors motion-reduce:transition-none">{tags}</li>
           ))}
         </ul>
       )
     }
-    <p class="text-base text-black dark:text-zinc-400 transition-colors">{description}</p>
+    <p class="text-base text-black dark:text-zinc-400 transition-colors motion-reduce:transition-none">{description}</p>
   </a>
 </div>

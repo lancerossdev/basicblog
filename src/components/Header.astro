@@ -2,21 +2,21 @@
 import { Icon } from "astro-icon";
 ---
 
-<header class="dark:bg-zinc-900 bg-white max-w-4xl m-auto transition-colors">
-  <a href="/" class="text-2xl text-black dark:text-zinc-300 transition-colors absolute m-8">lanceross</a>
+<header class="dark:bg-zinc-900 bg-white max-w-4xl m-auto transition-colors motion-reduce:transition-none">
+  <a href="/" class="text-2xl text-black dark:text-zinc-300 hover:dark:text-white transition-colors motion-reduce:transition-none absolute m-8">lanceross</a>
   <nav class="p-8">
     <div class="flex justify-end items-center m-0">
       <div class="flex flex-row space-x-3">
         <a href="/posts" aria-label="notepad logo">
-          <Icon name="ic:outline-article" class="sm:hidden w-7 text-black dark:text-white hover:text-zinc-500 dark:hover:text-zinc-400 transition-colors" />
-          <p class="hidden sm:block text-black dark:text-zinc-400 hover:text-zinc-500 dark:hover:text-white transition-colors text-xl mx-2">Posts</p>
+          <Icon name="ic:outline-article" class="sm:hidden w-7 text-black dark:text-white hover:text-zinc-500 dark:hover:text-zinc-400 transition-colors motion-reduce:transition-none" />
+          <p class="hidden sm:block text-black dark:text-zinc-400 hover:text-zinc-500 dark:hover:text-white transition-colors motion-reduce:transition-none text-xl mx-2">Posts</p>
         </a>
         <a href="https://github.com/lancerossdev/astro-basic-blog" target="_blank" rel="noopener nofollow" aria-label="github logo">
-          <Icon name="eva:github-outline" class="w-7 text-black dark:text-white hover:text-zinc-500 dark:hover:text-zinc-400 transition-colors" />
+          <Icon name="eva:github-outline" class="w-7 text-black dark:text-white hover:text-zinc-500 dark:hover:text-zinc-400 transition-colors motion-reduce:transition-none" />
         </a>
         <button class="theme-toggle pointer" aria-label="theme toggle">
-          <Icon name="charm:moon" class="w-7 hover:text-zinc-500 dark:hover:text-zinc-400 transition-colors dark:hidden" />
-          <Icon name="akar-icons:sun" class="w-7 dark:text-white hover:text-zinc-500 dark:hover:text-zinc-400 transition-colors hidden dark:block" />
+          <Icon name="charm:moon" class="w-7 hover:text-zinc-500 dark:hover:text-zinc-400 transition-colors motion-reduce:transition-none dark:hidden" />
+          <Icon name="akar-icons:sun" class="w-7 dark:text-white hover:text-zinc-500 dark:hover:text-zinc-400 transition-colors motion-reduce:transition-none hidden dark:block" />
         </button>
       </div>
     </div>

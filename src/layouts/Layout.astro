@@ -69,13 +69,13 @@ const canonicalURL = new URL(Astro.url).href;
       });
     </script>
   </head>
-  <body class="font-inter text-xl dark:bg-zinc-900 dark:text-white transition-colors selection:bg-sky-600/60 scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:scrollbar-track-zinc-800">
+  <body class="font-inter text-xl dark:bg-zinc-900 dark:text-white transition-colors motion-reduce:transition-none selection:bg-sky-600/60 scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:scrollbar-track-zinc-800">
     <Header />
     <main class="m-auto px-8 max-w-4xl">
       <slot />
     </main>
     <footer class="text-center py-8 text-lg">
-      <p>Made with 🤍 by <a href="https://lanceross.xyz" target="_blank" class="dark:text-sky-400 text-blue-600">Lance Ross</a></p>
+      <p>Made with 🤍 by <a href="https://lanceross.xyz" target="_blank" class="dark:text-sky-400 text-blue-600 hover:underline">Lance Ross</a></p>
     </footer>
   </body>
 </html>
