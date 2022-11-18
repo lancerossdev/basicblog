@@ -13,15 +13,15 @@ I will try to update this every time when I encountered an issue I forgot to fix
 
 ## Dev Notes 📝
 
-You can use `npm i` or `pnpm i` to install dependencies. I personally use `yarn` because it's what I use on most of my projects.
+You can use `npm i` or `yarn` to install dependencies. I personally use `pnpm` because it's what I use on most of my projects.
 
-`yarn` - Installs dependencies. You can use any of those.
+`pnpm install` - Installs dependencies. You can use any of those.
 
-`yarn dev` - Starts local dev server at `localhost:3000`
+`pnpm dev` - Starts local dev server at `localhost:3000`
 
-`yarn build` - Build your production site to `./dist/`
+`pnpm build` - Build your production site to `./dist/`
 
-`yarn preview` - Preview your build locally, before deploying
+`pnpm preview` - Preview your build locally, before deploying
 
 ## License ⚖️
 

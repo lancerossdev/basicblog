@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import image from "@astrojs/image";
+import astroLayouts from "astro-layouts";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,6 +15,7 @@ export default defineConfig({
       wrap: true,
     },
   },
+  
   base: "/",
   vite: {
     ssr: {
@@ -30,7 +32,17 @@ export default defineConfig({
     }),
     tailwind(),
     sitemap(),
-    mdx(),
+    mdx({
+      remarkPlugins: [
+        [
+          astroLayouts,
+          {
+            default: "@layouts/Layout.astro",
+            posts: "@layouts/BlogLayout.astro",
+          },
+        ],
+      ],
+    }),
     image(),
   ],
 });
