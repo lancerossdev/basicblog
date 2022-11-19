@@ -24,7 +24,7 @@ const canonicalURL = new URL(Astro.url).href;
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/assets/ogimage.jpg" />
+    <meta property="og:image" content="/banner.png" />
     <meta property="og:image:alt" content="Preview of the template" />
     <meta property="og:site_name" content="Astro Basic Blog Template" />
     <meta property="og:locale" content="en_US" />
@@ -55,7 +55,7 @@ const canonicalURL = new URL(Astro.url).href;
       }
       document.documentElement.className = theme;
     </script>
-    <script>
+    <script defer>
       const themeBtn = document.querySelector(".theme-toggle");
       const htmlClassList = document.documentElement.classList;
       themeBtn.addEventListener("click", function () {
@@ -74,8 +74,5 @@ const canonicalURL = new URL(Astro.url).href;
     <main class="m-auto px-8 max-w-4xl">
       <slot />
     </main>
-    <footer class="text-center py-8 text-lg">
-      <p>Made with 🤍 by <a href="https://lanceross.xyz" target="_blank" class="dark:text-sky-400 text-blue-600 hover:underline">Lance Ross</a></p>
-    </footer>
   </body>
 </html>

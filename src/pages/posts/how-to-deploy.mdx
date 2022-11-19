@@ -1,7 +1,6 @@
 ---
-layout: "@layouts/BlogLayout.astro"
 title: How to create a blog with this template
-description: Here is a guide how to create a blog with this template and deploy this to a static hosting!
+description: Here is a guide how to create a blog with this template and deploy this to Netlify!
 pubDate: 10/17/2022
 ---
 
@@ -22,13 +21,12 @@ git clone https://github.com/your-username/astro-basic-blog.git
 
 ## 2. Install dependencies and create your content
 
-For that, you need to install the dependencies using `npm install` (or whatever package manager you use) and open a dev server using the `npm run dev` and go to `http://localhost:3000` to your browser. After that, you can now create your content using Markdown or MDX in the `src/pages/blog` folder and also update the `blogs.ts` file. You can also change the design `src/pages/index.astro` file to your liking.
+For that, you need to install the dependencies using `npm install` (or whatever package manager you use) and open a dev server using the `npm run dev` and go to `http://localhost:3000` to your browser. After that, you can now create your content using MDX in the `src/pages/posts` folder. You can also change the design `src/pages/index.astro` file to your liking.
 
-On creating a blog, create a new file ending in `.mdx` or `.md` in the `src/pages/blog` folder. Make sure to add this at the top of your file, it will serve as the metadata of your blog and also the layout it will use.
+On creating a blog, create a new file ending in `.mdx` in the `src/pages/posts` folder. Make sure to add these contents so that the blog will be shown on the homepage.
 
 ```mdx
 ---
-layout: "@layouts/BlogLayout.astro"
 title: This is the title
 description: This is the description
 pubDate: 10/31/2022
@@ -39,9 +37,7 @@ pubDate: 10/31/2022
 
 `components` - The components folder of your project. This is where you can add your reusable components to your pages. You can use a JavaScript Framework or Library here if you want.
 
-`content` - The content folder of your project. This is where you update the descriptions on each blog card. I don't know how to use a cloud database so you don't need to update each blog for this so I just implemented it this way.
-
-`pages` - The pages folder of your project. This is where you can add your pages. You can add your blog posts on the `/blog` folder using MDX or Markdown.
+`pages` - The pages folder of your project. This is where you can add your pages. You can add your blog posts on the `/blog` folder using MDX.
 
 `images` - The images folder of your project. This is where you can add your images. Astro will automagically compress them for you so you don't need to worry about the size of your images and the performance of your site!
 

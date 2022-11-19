@@ -1,7 +1,15 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import BlogCard from "@components/BlogCard.astro";
-import { blogs } from "@content/blogs";
+
+interface Frontmatter {
+  title: string;
+  pubDate: string;
+  description: string;
+}
+
+let blogs = await Astro.glob<Frontmatter>("./posts/*.mdx");
+blogs = blogs.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf());
 ---
 
 <Layout title="Posts" description="hello world">
@@ -13,8 +21,8 @@ import { blogs } from "@content/blogs";
     </h2>
   </section>
   <section>
-    <div class="flex flex-col sm:grid-cols-2 place-items-center py-5 gap-2 sm:grid">
-      {blogs.map((blog) => <BlogCard title={blog.title} description={blog.description} pubDate={blog.pubDate} url={blog.url} tags={blog.tags} />)}
-    </div>
+    <ul class="flex flex-col sm:grid-cols-2 place-items-center py-5 gap-2 sm:grid">
+      {blogs.map((post) => <BlogCard title={post.frontmatter.title} description={post.frontmatter.description} pubDate={post.frontmatter.pubDate} url={post.url} />)}
+    </ul>
   </section>
 </Layout>
