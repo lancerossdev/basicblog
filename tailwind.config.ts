@@ -13,21 +13,32 @@ module.exports = {
             "code::after": {
               content: '""',
             },
-            p: {
+            "p, li": {
               code: {
-                backgroundColor: "#222222",
+                backgroundColor: "#27272a",
                 padding: "0.250rem 0.4rem",
                 borderRadius: "0.250rem",
-                fontWeight: "400",
+                fontWeight: "300",
+                color: "white",
+                transitionProperty: "color, background-color",
+                transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+                transitionDuration: "150ms",
               },
             },
-            li: {
+            "html:not(.dark) p, li": {
               code: {
-                backgroundColor: "#222222",
+                backgroundColor: "#e4e4e7",
                 padding: "0.250rem 0.4rem",
                 borderRadius: "0.250rem",
-                fontWeight: "400",
+                fontWeight: "300",
+                color: "black",
+                transitionProperty: "color, background-color",
+                transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+                transitionDuration: "150ms",
               },
+            },
+            "h1, h2, h3, h4": {
+              fontWeight: "300",
             },
           },
         },

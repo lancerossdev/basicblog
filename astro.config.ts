@@ -11,17 +11,11 @@ export default defineConfig({
   site: "https://basicblog.lanceross.xyz",
   markdown: {
     shikiConfig: {
-      theme: "github-dark-dimmed",
-      wrap: true,
+      theme: "dracula",
     },
   },
   
   base: "/",
-  vite: {
-    ssr: {
-      external: ["svgo"],
-    },
-  },
   integrations: [
     compress({
       css: true,
@@ -29,6 +23,7 @@ export default defineConfig({
       js: true,
       img: true,
       svg: true,
+      logger: 0,
     }),
     tailwind(),
     sitemap(),

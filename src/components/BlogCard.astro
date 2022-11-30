@@ -1,25 +1,20 @@
 ---
 export interface Props {
-  title?: string;
-  description?: string;
-  pubDate?: string;
-  author?: string;
-  url?: string | undefined;
+  title: string;
+  description: string;
+  pubDate: string;
+  url: string | undefined;
 }
-
-let { title, description, pubDate, url, tags} = Astro.props;
-const fullDate = new Date(pubDate).toLocaleDateString("en", {
-  dateStyle: "full",
+let { title, description, pubDate, url } = Astro.props;
+const shortDate = new Date(pubDate).toLocaleDateString("en", {
+  dateStyle: "short",
 });
 url = url + "/";
 ---
 
-<li class="grid grid-cols-1 max-w-xl gap-2 sm:grid-cols-3 leading-relaxed rounded-2xl dark:border-t dark:border-zinc-800 dark:hover:border-zinc-600 dark:text-zinc-400 transition-all motion-reduce:transition-none">
-  <a class="col-span-3 flex flex-col gap-2 sm:gap-4 p-5 my-2 bg-white hover:bg-zinc-200 dark:bg-zinc-900 transition-colors motion-reduce:transition-none shadow-xl rounded-lg" href={url}>
-    <time datetime={pubDate} class="text-sm tracking-wide text-black dark:text-zinc-400 transition-colors motion-reduce:transition-none">{fullDate}</time>
-    <h2 class="text-xl text-black dark:text-white transition-colors motion-reduce:transition-none">
-      {title}
-    </h2>
-    <p class="text-base text-black dark:text-zinc-400 transition-colors motion-reduce:transition-none">{description}</p>
+<li class="flex flex-col gap-2 sm:grid-cols-4 leading-relaxed rounded-2xl border-zinc-700 dark:text-zinc-400">
+  <a class="col-span-3 flex flex-col gap-2 sm:gap-4 p-5 my-2 hover:dark:bg-zinc-800 hover:bg-zinc-200 rounded-lg transition-colors" href={url}>
+    <span class="flex items-center justify-between mb-1"><h2 class="text-xl text-black dark:text-white">{title}</h2><span class="shrink-0 text-base">{shortDate}</span></span>
+    <p class="text-base text-black dark:text-zinc-300">{description}</p>
   </a>
 </li>
