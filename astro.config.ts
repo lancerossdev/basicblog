@@ -38,6 +38,8 @@ export default defineConfig({
         ],
       ],
     }),
-    image(),
+    image({
+      serviceEntryPoint: '@astrojs/image/sharp',
+    }),
   ],
 });
