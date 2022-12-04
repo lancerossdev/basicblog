@@ -31,11 +31,18 @@ blogs = blogs.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Dat
   <section class="py-14">
     <h1 class="text-3xl mb-5">Recent Post</h1>
     <p class="text-black dark:text-zinc-300 mb-2">Looking for all of my blog posts? Click the "posts" or the "Show more posts" link down below.</p>
-    <ul class="flex flex-col justify-center py-5 max-w-3xl m-auto">
-      {blogs.slice(0, 1).map((post) => <BlogCard title={post.frontmatter.title} description={post.frontmatter.description} pubDate={post.frontmatter.pubDate} url={post.url} />)}
+    <ul class="flex flex-col justify-center py-5">
+      {
+        blogs.length > 1 &&
+          blogs.slice(0, 2).map((post) => <BlogCard title={post.frontmatter.title} description={post.frontmatter.description} pubDate={post.frontmatter.pubDate} url={post.url} />)
+      }
     </ul>
     <div class="text-center dark:text-zinc-300 text-zinc-200 mt-5">
-      <a href="/posts" class="p-3 rounded-lg dark:bg-zinc-800 bg-zinc-200 dark:text-zinc-300 text-black p-4 ring-2 ring-opacity-0 ring-zinc-500 focus:ring-opacity-100 transition-all motion-reduce:transition-none">Show more posts</a>
+      <a
+        href="/posts"
+        class="p-3 rounded-lg dark:bg-zinc-800 bg-zinc-200 dark:text-zinc-300 text-black p-4 ring-2 ring-opacity-0 ring-zinc-500 focus:ring-opacity-100 transition-all motion-reduce:transition-none"
+        >Show more posts</a
+      >
     </div>
   </section>
   <section class="pt-8 pb-12">

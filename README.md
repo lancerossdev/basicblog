@@ -23,4 +23,4 @@ You can use `npm i` or `yarn` to install dependencies. I personally use `pnpm` b
 
 ## License ⚖️
 
-This repository has [MIT License](https://github.com/lancerossdev/astro-basic-blog/blob/master/LICENSE).
+This repository has [MIT License](https://github.com/lancerossdev/astro-basic-blog/blob/main/LICENSE).
