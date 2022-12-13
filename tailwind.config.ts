@@ -39,9 +39,6 @@ module.exports = {
                 transitionDuration: "150ms",
               },
             },
-            "h1, h2, h3, h4": {
-              fontWeight: "300",
-            },
           },
         },
       },

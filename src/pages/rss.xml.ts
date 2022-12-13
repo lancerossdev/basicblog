@@ -5,5 +5,4 @@ export const get = () => rss({
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   site: import.meta.env.SITE,
   items: import.meta.glob('./posts/**.mdx'),
-  stylesheet: '/style.xsl',
 });

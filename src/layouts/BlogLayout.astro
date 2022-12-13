@@ -16,9 +16,7 @@ const thisDate = new Date(pubDate).toLocaleDateString("en", {
 });
 pubDate = pubDate.split("T")[0];
 
-const ogImageParams = new URLSearchParams({
-  title: JSON.stringify(frontmatter.title)
-}).toString()
+const ogImageParams = "./banner.png"
 
 const canonicalURL = new URL(Astro.url).href;
 ---
@@ -38,7 +36,7 @@ const canonicalURL = new URL(Astro.url).href;
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={frontmatter.title} />
     <meta property="og:description" content={frontmatter.description} />
-    <meta property="og:image" content={`/og?${ogImageParams}`} />
+    <meta property="og:image" content={ogImageParams} />
     <meta property="og:site_name" content="Astro Basic Blog Template" />
     <meta property="og:locale" content="en_US" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -47,7 +45,7 @@ const canonicalURL = new URL(Astro.url).href;
     <meta name="twitter:creator" content="@lancerossdev" />
     <meta property="twitter:title" content={frontmatter.title} />
     <meta property="twitter:description" content={frontmatter.description} />
-    <meta property="twitter:image" content={`/og?${ogImageParams}`} />
+    <meta property="twitter:image" content={ogImageParams} />
     <meta name="generator" content={Astro.generator} />
     <meta name="author" content="Lance Ross" />
     <script is:inline>
@@ -69,26 +67,14 @@ const canonicalURL = new URL(Astro.url).href;
       }
       document.documentElement.className = theme;
     </script>
-    <script>
-      const themeBtn = document.querySelector(".theme-toggle");
-      const htmlClassList = document.documentElement.classList;
-      themeBtn.addEventListener("click", function () {
-        if (htmlClassList.contains("dark")) {
-          localStorage.setItem("theme", "light");
-          htmlClassList.remove("dark");
-        } else {
-          localStorage.setItem("theme", "dark");
-          htmlClassList.add("dark");
-        }
-      });
-    </script>
+    <script src="@scripts/main.js"></script>
   </head>
   <body
-    class="font-inter dark:bg-zinc-900 dark:text-white transition-colors motion-reduce:transition-none scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:scrollbar-track-zinc-800"
+    class="font-inter dark:bg-zinc-900 text-lg sm:text-xl dark:text-white transition-colors selection:bg-sky-600/60 scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-zinc-600 dark:scrollbar-track-zinc-800"
   >
     <Header />
     <main class="m-auto p-6 max-w-4xl">
-      <section class="prose prose-xl dark:text-slate-200 prose-a:dark:text-blue-400 prose-a:no-underline prose-pre:scrollbar-thin prose-pre:scrollbar-thumb-zinc-400 prose-pre:scrollbar-track-zinc-300 prose-pre:dark:scrollbar-thumb-zinc-500 prose-pre:dark:scrollbar-track-zinc-700 dark:bg-zinc-900 hover:prose-a:underline prose-a:text-blue-700 dark:prose-invert prose-a:underline-offset-2 dark:bg-inherit px-3">
+      <section class="prose sm:prose-xl dark:text-slate-200 prose-a:dark:text-blue-400 prose-a:no-underline prose-pre:scrollbar-thin prose-pre:scrollbar-thumb-zinc-400 prose-pre:scrollbar-track-zinc-300 prose-pre:dark:scrollbar-thumb-zinc-500 prose-pre:dark:scrollbar-track-zinc-700 dark:bg-zinc-900 hover:prose-a:underline prose-a:text-blue-700 dark:prose-invert prose-a:underline-offset-2 dark:bg-inherit px-3">
         <header class="mb-5">
           <h1 class="m-0 !text-4xl mb-7 dark:text-white">{frontmatter.title}</h1>
           <nav class="flex flex-col sm:flex-row sm:space-x-3 text-base dark:text-zinc-400">

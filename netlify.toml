@@ -1,6 +1,0 @@
-[build]
-publish = "dist"
-
-[[edge_functions]]
-  function = "og"
-  path = "/og"
