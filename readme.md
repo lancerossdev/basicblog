@@ -1,25 +1,33 @@
-# Astro Basic Blog Template 🚀
+# Astro Basic Blog 🚀
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lancerossdev/astro-basic-blog)
+A fully-responsive basic blog theme made with Tailwind CSS with blog sample, a dark theme and SEO Friendly!
 
-Hey there, this is my very first astro theme that I will create.
-This blog template is made with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com) for the Front-end.
+![image](https://user-images.githubusercontent.com/102563271/207328809-b6605026-6d20-4deb-878f-37af69159dd8.png)
 
-You can [create an Issue](https://github.com/lancerossdev/astro-basic-blog/issues/new) or submit a Pull Request if you think there's something wrong or you want to add a new feature on this blog template. I will appreciate your help!
+## Tech Stack 🛠️
 
-![Website Preview](https://user-images.githubusercontent.com/102563271/202830714-4604e247-e577-4954-a127-84b05e7509fa.png)
+- Static Site Generator: [Astro](https://astro.build/)
+- CSS Framework: [Tailwind CSS](https://tailwindcss.com/)
+- Markdown: [MDX](https://mdxjs.com/)
+- Package Manager: [pnpm](https://pnpm.io/)
 
-## Dev Notes 📝
+## Developer Notes 📝
 
-You can use `npm i` or `yarn` to install dependencies. I personally use `pnpm` because it's what I use on most of my projects.
+Here are some commands that you can run to get started with the project. You can also check all the commands in the [`package.json`](https://github.com/lancerossdev/astro-basic-blog/blob/main/package.json)
 
-`pnpm install` - Installs dependencies. You can use any of those.
+```bash
+# Install dependencies
+pnpm install
 
-`pnpm dev` - Starts local dev server at `localhost:3000`
+# Run the development server
+pnpm dev
 
-`pnpm build` - Build your production site to `./dist/`
+# Build the project
+pnpm build
 
-`pnpm preview` - Preview your build locally, before deploying
+# Serve the built project
+pnpm preview
+```
 
 ## License ⚖️
 
