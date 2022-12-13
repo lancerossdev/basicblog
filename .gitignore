@@ -22,5 +22,6 @@ pnpm-debug.log*
 package-lock.json
 yarn.lock
 
-# Local Netlify folder
+# other folders
+.vercel
 .netlify

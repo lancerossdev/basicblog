@@ -16,7 +16,7 @@ export default async function handler(req: Request) {
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          backgroundColor: "#18181b",
+          background: "linear-gradient(90deg, #18181b, #3f3f46)",
         }}
       >
         <div
@@ -32,7 +32,7 @@ export default async function handler(req: Request) {
           <div
             style={{
               display: "flex",
-              fontSize: "88",
+              fontSize: "72",
               color: "white",
               fontWeight: "700",
               flexWrap: "wrap",
