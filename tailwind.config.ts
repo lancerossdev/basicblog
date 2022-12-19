@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   darkMode: "class",
@@ -14,6 +14,12 @@ module.exports = {
             },
             "code::after": {
               content: '""',
+            },
+            code: {
+              fontFamily: "Fira Code, monospace",
+              span: {
+                fontFamily: "Fira Code, monospace",
+              },
             },
             "p, li": {
               code: {
@@ -43,7 +49,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Inter', ...fontFamily.sans]
+        sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
       },
     },
   },
