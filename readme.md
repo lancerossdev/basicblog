@@ -13,7 +13,7 @@ A fully-responsive basic blog theme made with Tailwind CSS with blog sample, a d
 
 ## Developer Notes 📝
 
-Here are some commands that you can run to get started with the project. You can also check all the commands in the [`package.json`](https://github.com/lancerossdev/astro-basic-blog/blob/main/package.json)
+Here are some commands that you can run to get started with the project. You can also check all the commands in the [`package.json`](https://github.com/lancerossdev/basicblog/blob/main/package.json)
 
 ```bash
 # Install dependencies
@@ -31,4 +31,4 @@ pnpm preview
 
 ## License ⚖️
 
-This repository has [MIT License](https://github.com/lancerossdev/astro-basic-blog/blob/main/LICENSE).
+This repository has [MIT License](https://github.com/lancerossdev/basicblog/blob/main/license).

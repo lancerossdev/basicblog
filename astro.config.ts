@@ -11,7 +11,7 @@ export default defineConfig({
   site: "https://basicblog.lanceross.xyz",
   markdown: {
     shikiConfig: {
-      theme: "dracula",
+      theme: "dark-plus",
     },
   },
   
