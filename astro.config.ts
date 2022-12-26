@@ -5,16 +5,28 @@ import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import image from "@astrojs/image";
 import astroLayouts from "astro-layouts";
+import codeTitle from "remark-code-title";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://basicblog.lanceross.xyz",
   markdown: {
+    extendDefaultPlugins: true,
     shikiConfig: {
       theme: "dark-plus",
     },
+    remarkPlugins: [
+      [
+        astroLayouts,
+        {
+          default: "@layouts/Layout.astro",
+          posts: "@layouts/BlogLayout.astro",
+        },
+      ],
+      codeTitle,
+    ],
   },
-  
+
   base: "/",
   integrations: [
     compress({
@@ -27,19 +39,9 @@ export default defineConfig({
     }),
     tailwind(),
     sitemap(),
-    mdx({
-      remarkPlugins: [
-        [
-          astroLayouts,
-          {
-            default: "@layouts/Layout.astro",
-            posts: "@layouts/BlogLayout.astro",
-          },
-        ],
-      ],
-    }),
+    mdx(),
     image({
-      serviceEntryPoint: '@astrojs/image/sharp',
+      serviceEntryPoint: "@astrojs/image/sharp",
     }),
   ],
 });

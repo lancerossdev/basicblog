@@ -5,6 +5,7 @@ pubDate: November 30, 2022
 ---
 import BlogImage from "@components/BlogImage.astro"
 import Dog from "@images/jules-beagle-unsplash.jpg"
+import Portrait from "@images/portrait-beagle-unsplash.jpg"
 
 This is a test blog post to see how markdown styling works. I'm going to try to make this as long as possible to see how the styling works.
 
@@ -85,8 +86,9 @@ This is an array `[1, 2, 3]` of numbers 1 through 3.
 ```html
 <h1>Code Block</h1>
 ```
+With code title:
 
-```jsx
+```jsx title="src/components/Counter.jsx" {1}
 import { createSignal } from 'solid-js'
 
 export default function Counter() {
@@ -128,10 +130,14 @@ Currently, my custom component for images only supports 16:9 aspect ratio or els
 
 ```astro
 <BlogImage src={Dog} alt="Beagle Dog by Jules D. on Unsplash" />
+
+<BlogImage src={Portrait} alt="Beagle Dog by Jules D. on Unsplash" />
+
 ```
 
 <BlogImage src={Dog} alt="Beagle Dog by Jules D. on Unsplash" />
 
+<BlogImage src={Portrait} alt="Beagle Dog by Jules D. on Unsplash" />
 
 ### Strikethrough
 
@@ -147,6 +153,8 @@ Currently, my custom component for images only supports 16:9 aspect ratio or els
 | Content Cell 4 | Content Cell 4 |
 
 ### Tasklist
+
+It might affect your Lighthouse score!
 
 - [ ] to do
 - [x] done

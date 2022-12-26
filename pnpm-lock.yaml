@@ -13,6 +13,7 @@ specifiers:
   astro-compress: 1.0.8
   astro-icon: ^0.8.0
   astro-layouts: ^0.0.6
+  remark-code-title: ^0.2.2
   sharp: ^0.31.2
   tailwind-scrollbar: ^2.0.1
   tailwindcss: ^3.2.4
@@ -30,6 +31,7 @@ devDependencies:
   astro-compress: 1.0.8
   astro-icon: 0.8.0
   astro-layouts: 0.0.6_astro@1.7.2
+  remark-code-title: 0.2.2
   sharp: 0.31.2
   tailwind-scrollbar: 2.0.1_tailwindcss@3.2.4
   tailwindcss: 3.2.4
@@ -3620,6 +3622,12 @@ packages:
   /relateurl/0.2.7:
     resolution: {integrity: sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==}
     engines: {node: '>= 0.10'}
+    dev: true
+
+  /remark-code-title/0.2.2:
+    resolution: {integrity: sha512-p1E8neRmxjm2XptRN26KOK8n+ipqONgpxQGB8SPkfICd0dv/0YixXo6LA/gaBdNGxR1O3owB1Xl2yoWSzAbKlg==}
+    dependencies:
+      unist-util-visit: 4.1.1
     dev: true
 
   /remark-frontmatter/4.0.1:

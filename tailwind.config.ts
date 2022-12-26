@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   darkMode: "class",
@@ -21,6 +22,21 @@ module.exports = {
                 fontFamily: "Fira Code, monospace",
               },
             },
+            "div[data-remark-code-title]": {
+              backgroundColor: colors.neutral[800],
+              fontFamily: "Fira Code, monospace",
+              fontSize: "0.8rem",
+              padding: "0.5rem 1rem",
+              borderTopRightRadius: "0.25rem",
+              borderTopLeftRadius: "0.25rem",
+              transitionDuration: "150ms",
+            },
+            "div[data-remark-code-title] + pre": {
+              marginTop: "0 !important",
+              borderTopRightRadius: "0 !important",
+              borderTopLeftRadius: "0 !important",
+              transitionDuration: "150ms",
+            },
             "p, li": {
               code: {
                 backgroundColor: "#27272a",
@@ -33,9 +49,14 @@ module.exports = {
                 transitionDuration: "150ms",
               },
             },
+            "html:not(.dark) div[data-remark-code-title]": {
+              backgroundColor: colors.zinc[200],
+              color: colors.black,
+              transitionDuration: "150ms",
+            },
             "html:not(.dark) p, li": {
               code: {
-                backgroundColor: "#e4e4e7",
+                backgroundColor: colors.zinc[200],
                 padding: "0.250rem 0.4rem",
                 borderRadius: "0.250rem",
                 fontWeight: "300",

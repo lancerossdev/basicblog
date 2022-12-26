@@ -3,20 +3,16 @@ import { Picture } from "@astrojs/image/components";
 interface Props {
   src: string;
   alt: string;
-  aspectRatio?: number;
   loading?: "lazy" | "eager";
 }
-const { src, alt, aspectRatio = 16 / 9, loading = "lazy" } = Astro.props;
+const { src, alt, loading = "lazy" } = Astro.props;
 ---
 
 <Picture
   widths={[1024]}
   sizes="(max-width: 800px) 90vw, 768px"
-  aspectRatio={aspectRatio}
   src={src}
   loading={loading}
   alt={alt}
   class="rounded-xl overflow-hidden"
-  width={768}
-  height={402}
 />
